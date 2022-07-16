@@ -1,3 +1,4 @@
+import 'package:cuttr_application/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -30,6 +31,33 @@ class MyMembershipPageState extends State<MyMembershipPage> {
       onWillPop: _onWillPop,
       child: Scaffold(
         resizeToAvoidBottomInset: false,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+          elevation: 5.0,
+          centerTitle: true,
+          title: Text(
+            'Membership',
+            style: Styles.customTitleTextStyle(
+              color: AppColors.colors[2],
+              fontWeight: FontWeight.w600,
+              fontSize: Sizes.TEXT_SIZE_22,
+            ),
+          ),
+          actions: [
+            // IconButton(
+            //   icon: Icon(CupertinoIcons.info),
+            //   onPressed: () {},
+            // ),
+          ],
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+            children: [
+              //TODO: List View
+            ],
+          ),
+        ),
       ),
     );
   }
